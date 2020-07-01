@@ -2003,7 +2003,7 @@ abstract class _MarkdownExtra_TmpImpl extends \Michelf\Markdown {
 				# Increase/decrease nested tag count.
 				#
 				if ($tag[1] == '/')						$depth--;
-				else if ($tag{strlen($tag)-2} != '/')	$depth++;
+				else if ($tag[strlen($tag)-2] != '/')	$depth++;
 
 				if ($depth < 0) {
 					#
@@ -2131,7 +2131,7 @@ abstract class _MarkdownExtra_TmpImpl extends \Michelf\Markdown {
 				#
 				if (preg_match('{^</?'.$base_tag_name_re.'\b}', $tag)) {
 					if ($tag[1] == '/')						$depth--;
-					else if ($tag{strlen($tag)-2} != '/')	$depth++;
+					else if ($tag[strlen($tag)-2] != '/')	$depth++;
 				}
 				
 				#
