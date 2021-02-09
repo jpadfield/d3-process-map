@@ -22,7 +22,7 @@ function get_html_docs($obj) {
 
     $name = str_replace('_', '\_', $obj['name']);
     $type = $obj['type'];
-    if ($config['types'][$type]) {
+    if (isset($config['types'][$type])) {
         $type = $config['types'][$type]['long'];
     }
 
